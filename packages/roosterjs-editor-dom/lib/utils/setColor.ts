@@ -49,8 +49,8 @@ export default function setColor(
                 : DarkModeDatasetNames.OriginalStyleColor;
             if (!isDarkMode || color == TRANSPARENT_COLOR) {
                 delete element.dataset[dataSetName];
-            } else if (modeIndependentColor) {
-                element.dataset[dataSetName] = modeIndependentColor.lightModeColor;
+            } else {
+                element.dataset[dataSetName] = modeIndependentColor?.lightModeColor || colorString;
             }
         }
 
