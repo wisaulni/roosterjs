@@ -41,7 +41,7 @@ function setSelectionToBlockGroup(
 
         group.blocks.forEach((block, i) => {
             isInSelection = handleSelection(isInSelection, block, start, end, isInSelection => {
-                return setSelectionToBlock(block, isInSelection, start, end);
+                return setSelectionToBlock(block, isInSelection, start, end2);
             });
 
             if (block.blockType == 'Paragraph' && block.segments.length == 0 && block.isImplicit) {
